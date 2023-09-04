@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    id="cordova-plugin-mixedcontentmode" version="1.0.0-230903">
+    <name>MixedContentMode</name>
+    <description>Cordova Android Mixed Content Mode Plugin</description>
+    <author>Carlos Bello</author>
+    <license>MIT</license>
+    <keywords>cordova,android,mixed-content-mode,http,https</keywords>
+    <repo>https://github.com/carlosbet/cordova-plugin-mixed-content-mode</repo>
+    <issue>https://github.com/carlosbet/cordova-plugin-mixed-content-mode/issues</issue>
+
+    <js-module src="www/mixedcontentmode.js" name="mixedcontentmode">
+        <clobbers target="window.MixedContentMode" />
+    </js-module>
+
+    <platform name="android">
+        <source-file src="src/android/MixedContentMode.java" target-dir="src/com/github/carlosbet/cordova/mixedcontentmode" />
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="MixedContentMode">
+                <param name="android-package" value="com.github.carlosbet.cordova.mixedcontentmode.MixedContentMode" />
+                <!-- Important to call initialize -->
+                <param name="onload" value="true" />
+            </feature>
+            <!-- <preference name="MixedContentMode" value="CompatibilityMode" /> -->
+        </config-file>
+    </platform>
+</plugin>

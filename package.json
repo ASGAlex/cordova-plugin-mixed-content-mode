@@ -1,0 +1,24 @@
+{
+    "name": "cordova-plugin-mixed-content-mode",
+    "version": "1.0.0-230903",
+    "description": "Cordova Android Mixed Content Mode Plugin",
+    "cordova": {
+      "id": "cordova-plugin-mixedcontentmode",
+      "platforms": [
+        "android"
+      ]
+    },
+    "repository": "github:carlosbet/cordova-plugin-mixed-content-mode",
+    "bugs": "https://github.com/carlosbet/cordova-plugin-mixed-content-mode/issues",
+    "homepage": "https://github.com/carlosbet/cordova-plugin-mixed-content-mode#readme",
+    "keywords": [
+      "cordova",
+      "mixed-content-mode",
+      "http",
+      "https",
+      "ecosystem:cordova",
+      "cordova-android"
+    ],
+    "author": "Carlos Bello",
+    "license": "MIT"
+  }
