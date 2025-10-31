@@ -40,13 +40,12 @@ import org.apache.cordova.LOG;
 
 public class MixedContentMode extends CordovaPlugin {
     private static final String LOG_TAG = "MixedContentMode";
-    
-    private HashMap<String, Integer> modes = new HashMap<String, Integer>(
-        Map.of(
-            "neverallow", WebSettings.MIXED_CONTENT_NEVER_ALLOW,
-            "compatibilitymode", WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE,
-            "alwaysallow", WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
-    ));
+
+    private HashMap<String, Integer> modes = new HashMap<String, Integer>() {{
+        put("neverallow", WebSettings.MIXED_CONTENT_NEVER_ALLOW);
+        put("compatibilitymode", WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE);
+        put("alwaysallow", WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+    }};
 
     private WebView androidWebView;
     private WebSettings wSettings;
